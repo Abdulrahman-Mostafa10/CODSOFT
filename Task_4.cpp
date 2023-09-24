@@ -34,12 +34,10 @@ public:
 };
 To_Do_List::To_Do_List()
 {
-	Bedo();
 	head = tail = nullptr;
 }
 To_Do_List::To_Do_List(string passed_name)
 {
-	Bedo();
 	head = tail = nullptr;
 	add_task(passed_name);
 }
@@ -120,6 +118,7 @@ bool To_Do_List::remove_task(string passed_name)
 
 void To_Do_List::show_tasks() const
 {
+	Bedo();
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_SCREEN_BUFFER_INFO consoleInfo;
 	GetConsoleScreenBufferInfo(hConsole, &consoleInfo);
